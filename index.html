@@ -145,6 +145,35 @@
             transform: translateY(-2px);
         }
 
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+            padding: 0.8rem 1.2rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-button:hover {
+            background: #128c7e;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .whatsapp-button i {
+            font-size: 1rem;
+        }
+
+
+
         /* Sections */
         .section {
             padding: 80px 0;
@@ -488,6 +517,11 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                padding: 0 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
             }
 
             .mobile-menu-toggle {
@@ -524,6 +558,7 @@
                 display: block;
                 padding: 1rem 2rem;
                 border-bottom: 1px solid rgba(255,255,255,0.1);
+                font-size: 1.1rem;
             }
 
             .nav-menu a:hover {
@@ -534,8 +569,19 @@
                 display: none;
             }
 
+            .hero {
+                padding: 0 1rem;
+                min-height: 100vh;
+            }
+
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                margin-bottom: 2.5rem;
             }
 
             .about-content {
@@ -555,6 +601,7 @@
             .about-text p {
                 text-align: center;
                 font-size: 1rem;
+                line-height: 1.7;
             }
 
             .about-image {
@@ -568,6 +615,48 @@
 
             .section-title {
                 font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .service-icon {
+                font-size: 2.5rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+
+            .portfolio-item {
+                height: 150px;
+                font-size: 0.9rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .step {
+                padding: 1.5rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .blog-card {
+                margin-bottom: 1rem;
             }
 
             .contact-form {
@@ -575,15 +664,82 @@
                 padding: 0 1rem;
             }
 
+            .form-group {
+                margin-bottom: 1.2rem;
+            }
+
             .form-group input,
             .form-group textarea {
                 font-size: 16px; /* Prevents zoom on iOS */
+                padding: 0.8rem;
             }
 
             .cta-button {
                 width: 100%;
                 text-align: center;
                 margin-top: 1rem;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 0 1rem;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        /* Extra Small Devices */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .about-text h2 {
+                font-size: 1.6rem;
+            }
+
+            .service-card {
+                padding: 1.2rem;
+            }
+
+            .portfolio-item {
+                height: 120px;
+                font-size: 0.8rem;
+            }
+
+            .step-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .blog-content {
+                padding: 1rem;
+            }
+
+            .blog-title {
+                font-size: 1.1rem;
+            }
+
+            .footer-content {
+                padding: 0 0.5rem;
             }
         }
 
@@ -602,6 +758,49 @@
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+
+
+
+
+
+
+
+
+        @media (max-width: 768px) {
+            .whatsapp-button {
+                bottom: 20px;
+                right: 20px;
+                padding: 0.8rem;
+                font-size: 0.8rem;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                justify-content: center;
+            }
+
+            .whatsapp-button span {
+                display: none;
+            }
+
+            .whatsapp-button i {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-button {
+                bottom: 15px;
+                right: 15px;
+                padding: 0.7rem;
+                width: 45px;
+                height: 45px;
+            }
+
+            .whatsapp-button i {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -637,7 +836,10 @@
         <div class="hero-content">
             <h1>New Styles New Designs</h1>
             <p>Find matching curtains for your Home</p>
-            <a href="#contact" class="cta-button">Enquire Now</a>
+            <a href="https://wa.me/+917034484535" class="cta-button whatsapp-button" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp Now</span>
+            </a>
         </div>
     </section>
 
@@ -842,7 +1044,7 @@
                  <p>Phone: +91 70344 84535</p>
                  <p>Address: Goa | Kerala | Karnataka | India</p>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/windowfix.in?igsh=MWYybnV4b3B4ZGc3eQ=="><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
@@ -930,6 +1132,7 @@
             }
         });
     </script>
-</body>
 
+
+</body>
 </html> 

@@ -68,8 +68,8 @@
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(30, 60, 114, 0.95)';
+                header.style.background = 'rgba(139, 115, 85, 0.95)';
             } else {
-                header.style.background = 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)';
+                header.style.background = 'linear-gradient(135deg, #8B7355 0%, #A0522D 100%)';
             }
         });
